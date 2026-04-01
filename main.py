@@ -1,14 +1,8 @@
 from fuunciones import *
 
-dic_clientes = {
-    "name": "paola",
-    "email": "paola23@gmail.com"}
-dic_product = {
-    "product name": "chocolate cookie",
-    "price": 3.000
-}
-
-
+dic_clientes = {}
+dic_product = {}
+dic_orders ={}
 
 print("\n")
 print("""
