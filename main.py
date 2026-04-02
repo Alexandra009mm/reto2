@@ -1,6 +1,6 @@
 from fuunciones import *
 
-dic_clientes = {}
+dic_costumers = {}
 dic_product = {}
 dic_orders ={}
 
@@ -30,13 +30,13 @@ while keep_register == "yes":
         enter a option => """))
             
             if option == 1:
-                    register(dic_clientes)
+                    register(dic_costumers)
 
             elif option == 2:
                     add_product(dic_product)
 
             elif option == 3:
-                    creation_orders(dic_clientes,dic_product,dic_orders)
+                    creation_orders(dic_costumers,dic_product,dic_orders)
 
             elif option == 4:
                     order_consultation(dic_orders)

@@ -2,7 +2,7 @@ from decimal import Decimal
 
 Id = 0
 product_id = 0
-def register(dic_clientes):
+def register(dic_costumers):
     global Id 
     keep_register = "yes"
     while keep_register == "yes":
@@ -20,7 +20,7 @@ def register(dic_clientes):
             
             Id += 1
 
-            dic_clientes[Id] = new_costumer 
+            dic_costumers[Id] = new_costumer 
  
          
         except ValueError:
@@ -36,7 +36,7 @@ def register(dic_clientes):
         keep_register = "no"
 
 
-    return dic_clientes
+    return dic_costumers
 
 def add_product(dic_product):
     global product_id
@@ -70,14 +70,14 @@ def add_product(dic_product):
 
     return dic_product
     
-def creation_orders(dic_clientes,dic_product,dic_orders):
+def creation_orders(dic_costumers,dic_product,dic_orders):
     keep_register = "yes"
     while keep_register == "yes":
 
         ask_Id = int(input("enter your ID: "))
 
 
-        if ask_Id in  dic_clientes:
+        if ask_Id in  dic_costumers:
             for key_product, value in dic_product.items():
                 print(f"product ID: {key_product}| producto: {value[0]} | price: {value[1]}")
 
@@ -101,7 +101,7 @@ def creation_orders(dic_clientes,dic_product,dic_orders):
                 if confirmation == "yes":
                 
                     dic_new_orders ={
-                        "customer": dic_clientes[ask_Id]["name"] ,
+                        "customer": dic_costumers[ask_Id]["name"] ,
                         "product": dic_product[order_product][0],
                         "quantity": quantity,
                         "subtotal": subtotal
@@ -177,9 +177,17 @@ def d_calculation(dic_orders):
     print(f"The total income for the day is: {total_every_costumer}")
     return total_every_costumer 
 
-def final_report(dic_orders):
+def final_report(dic_orders,dic_costumers,dic_product):
     total_products = 0
     tota_costumer = 0
     total_orders = 0
+
+    print(f"total {len(dic_costumers)}")  # número de clientes registrados
+    len(dic_product)    # número de productos
+    len(dic_orders)     # número de clientes que hicieron órdenes
+
+
+
+
 
     
