@@ -36,10 +36,10 @@ while keep_register == "yes":
                     add_product(dic_product)
 
             elif option == 3:
-                    creation_orders(dic_clientes,dic_product)
+                    creation_orders(dic_clientes,dic_product,dic_orders)
 
             elif option == 4:
-                    print()
+                    order_consultation(dic_orders)
 
             elif option == 5:
                     print()
@@ -48,8 +48,7 @@ while keep_register == "yes":
                     print()
 
             elif option == 7:
-                    print("thank you for using the program")
-                    keep_register == "no"
+                   keep_register = "no"
 
             else:
                     print("Error, option invalide, try again")
@@ -59,6 +58,8 @@ while keep_register == "yes":
                 print("Enter the option number")
                 continue
 
+print("thank you for using the program :)" \
+"")
                 
                 
                 
