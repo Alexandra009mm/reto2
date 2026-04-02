@@ -168,6 +168,18 @@ def order_consultation(dic_orders):
             keep_register = "no"
     return
 
+def d_calculation(dic_orders):
+    total_every_costumer = 0
+    for orders in dic_orders.values():
+         for order in orders:
+             total_every_costumer += order["subtotal"]
 
+    print(f"The total income for the day is: {total_every_costumer}")
+    return total_every_costumer 
+
+def final_report(dic_orders):
+    total_products = 0
+    tota_costumer = 0
+    total_orders = 0
 
     

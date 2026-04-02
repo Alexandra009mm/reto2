@@ -42,7 +42,7 @@ while keep_register == "yes":
                     order_consultation(dic_orders)
 
             elif option == 5:
-                    print()
+                    d_calculation(dic_orders)
 
             elif option == 6:
                     print()
