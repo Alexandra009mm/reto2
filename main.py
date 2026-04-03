@@ -1,6 +1,6 @@
 from fuunciones import *
 
-dic_costumers = {}
+dic_customers = {}
 dic_product = {}
 dic_orders ={}
 
@@ -30,13 +30,13 @@ while keep_register == "yes":
         enter a option => """))
             
             if option == 1:
-                    register(dic_costumers)
+                    register(dic_customers)
 
             elif option == 2:
                     add_product(dic_product)
 
             elif option == 3:
-                    creation_orders(dic_costumers,dic_product,dic_orders)
+                    creation_orders(dic_customers,dic_product,dic_orders)
 
             elif option == 4:
                     order_consultation(dic_orders)
@@ -45,21 +45,20 @@ while keep_register == "yes":
                     d_calculation(dic_orders)
 
             elif option == 6:
-                    print()
+                    report_menu(dic_orders)
 
             elif option == 7:
                    keep_register = "no"
 
             else:
-                    print("Error, option invalide, try again")
+                    print("❌ Invalid option, try again.")
                     continue
             
         except ValueError:
                 print("Enter the option number")
                 continue
 
-print("thank you for using the program :)" \
-"")
+print("thank you for using the program :)")
                 
                 
                 
