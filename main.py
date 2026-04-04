@@ -1,33 +1,37 @@
-from fuunciones import *
+from register import register
+from add_product import add_product
+from create_orders import creation_orders
+from show_total import d_calculation
+from final_report import report_menu
+from order_consultation import order_consultation
 
 dic_customers = {}
 dic_product = {}
 dic_orders ={}
 
-print("\n")
 print("""
                  ╔════════════════════════════╗
 ------------------Welcome to the sales register -----------------------
                  ╚════════════════════════════╝
 \n""")
 
-keep_register = "yes"
-while keep_register == "yes":
+option = 0
+while option != 7:
         try: 
-            option = int(input(f"""
-        -------------------------------------------------------------
-        ╔════════════════════════════╗
-                    MENU
-        ╚════════════════════════════╝
-        1. register.
-        2. add product.
-        3. add order.
-        4. Registered Order Consultation.
-        5. Daily Income Calculation. 
-        6. Final Report Generation.
-        7. Exit.
-        --------------------------------------------------------------                   
-        enter a option => """))
+            option = int(input(f"""\n
+-------------------------------------------------------------
+╔════════════════════════════╗
+            MENU
+╚════════════════════════════╝
+1. register.
+2. add product.
+3. add order.
+4. Registered Order Consultation.
+5. Daily Income Calculation. 
+6. Final Report Generation.
+7. Exit.
+--------------------------------------------------------------                   
+enter a option => """))
             
             if option == 1:
                     register(dic_customers)
@@ -48,10 +52,10 @@ while keep_register == "yes":
                     report_menu(dic_orders)
 
             elif option == 7:
-                   keep_register = "no"
+                   print("thank you for using the program :)")
 
             else:
-                    print("❌ Invalid option, try again.")
+                    print("Invalid option, try again.")
                     continue
             
         except ValueError:
